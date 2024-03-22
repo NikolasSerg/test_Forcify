@@ -1,15 +1,11 @@
 	import { Button, Col, Form, Modal } from "react-bootstrap";
-	import React, { useEffect, useState } from "react";
+	import React from "react";
 	import { Formik } from "formik";
 	import * as yup from "yup";
 	import { IModalProps, NewCardState } from "./Modal.type";
 	import ReactDOM from "react-dom";
 
-	const defaultCard = {
-		title: "",
-		description: "",
-	};
-
+	
 	export const ModalComponent: React.FC<IModalProps> = ({
 		isOpen,
 		openModalCallback,
@@ -18,18 +14,10 @@
 		card,
 	}) => {
 
-	// const [cardState, setCardState] = useState<NewCardState>(defaultCard);
-
 	const schema = yup.object().shape({
 		title: yup.string().required("Title is required"),
 		description: yup.string().required("Description is required"),
 	});
-
-	// useEffect(() => {
-	// 	card && setCardState(card);
-	// 	console.log(card, '------- card -------');
-		
-	// }, [card]);
 
 	const handleSubmit = (values: NewCardState) => {
 		schema

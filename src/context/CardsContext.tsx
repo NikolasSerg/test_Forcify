@@ -38,6 +38,7 @@ export const CardContextProvider: React.FC<{children: React.ReactNode}> = ({ chi
                 DBRef.current = null;
             }
         };
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 
