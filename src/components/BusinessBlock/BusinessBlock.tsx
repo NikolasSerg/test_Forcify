@@ -4,6 +4,8 @@ import 'global.scss'
 
 export const BusinessBlock = () => {
 
+
+    
     return(
         <Col>
             <Row>
