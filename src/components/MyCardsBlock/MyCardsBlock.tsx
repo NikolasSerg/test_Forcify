@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 
 import { useCardContext } from "context/index";
-import { ModalComponent, CardsList, ICard } from "components/index";
+import { ModalComponent, CardsList, ICard, TitleBlock, Direction } from "components/index";
 import { INewCard, TypeCard } from "types/index";
 import { ActivityService } from "services/index";
 
@@ -56,15 +56,11 @@ export const MyCardsBlock = () => {
 
     return(
         <Col>
-            <Row className="gap-5">
-                <Col className={`d-flex flex-column justify-content-center align-items-end w-75`}>
-                    <h2 className={`${styles.header3}`}>B&O Plan —</h2>
-                    <p>User Experience, User Interface</p>   
-                </Col> 
-                <Col className={`bigNumber d-flex justify-content-start align-items-center`}>02</Col> 
+            <Row className="gap-5 position-relative">
+                <TitleBlock point={'02'} header={'B&O Plan —'} title={'User Experience, User Interface'} direction={Direction.ROW_REVERS} />
             </Row>
         <div className={`${styles.containerBlock}`}>
-            <Container>
+            <Col>
                 <Row>
                     <h1>My Cards</h1>
                 </Row>
@@ -78,7 +74,7 @@ export const MyCardsBlock = () => {
                     submitModalCallback={handleSubmitModal}
                     card={card}
                 />
-            </Container>
+            </Col>
         </div>
         </Col>
     )

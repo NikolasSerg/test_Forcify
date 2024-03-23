@@ -1,15 +1,12 @@
 import { Col, Row, Image } from "react-bootstrap"
+import { Direction, TitleBlock } from "components"
 
 export const BuildingBlock = () => {
 
     return(
         <div>
             <Row>
-                <Col className={`bigNumber d-flex justify-content-end align-items-center`}>03</Col> 
-                <Col className={`d-flex flex-column justify-content-center align-items-start`}>
-                    <h2 className={`header3`}>Girls Globe —</h2>
-                    <p>Brand Strategy, Visual Identity</p>   
-                </Col> 
+                <TitleBlock point={'03'} header={'Girls Globe —'} title={'Brand Strategy, Visual Identity'} direction={Direction.ROW} />
             </Row>
             <Row className={`bodyBlock`}
                 style={{backgroundImage: 'url(/images/building.png)'}}

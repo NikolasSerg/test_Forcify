@@ -1,6 +1,7 @@
 import { Col, Row } from "react-bootstrap"
 import styles from "./BusinessBlock.module.scss"
 import 'global.scss'
+import { Direction, TitleBlock } from "components"
 
 export const BusinessBlock = () => {
 
@@ -8,13 +9,7 @@ export const BusinessBlock = () => {
     
     return(
         <Col>
-            <Row>
-                <Col className={`bigNumber d-flex justify-content-end align-items-center`}>01</Col> 
-                <Col className={`d-flex flex-column justify-content-center align-items-start w-50`}>
-                    <h2 className={`header3`}>Reykjavik Fashion Festival —</h2>
-                    <p>Branding, Interactive</p>   
-                </Col> 
-            </Row>
+            <TitleBlock point={'01'} header={'Reykjavik Fashion Festival —'} title={'Branding, Interactive'} direction={Direction.ROW} />
             <Row className={`bodyBlock`}
                 style={{backgroundImage: 'url(/images/business.png)'}}
             >
