@@ -1,11 +1,12 @@
 import { IImageProps } from "./Image.type";
-import styles from "./Image.module.scss";
+import { Col, Image } from "react-bootstrap";
  
 
 export const ImageComponent: React.FC<IImageProps> = ({url}) => {
 
     return(
-        <div className={`vh-100 wv-100 object-fit-cover ${styles.imgStyle}`} style={{backgroundImage: `url(${url})`}}>
-        </div>
+        <Col className="overflow-hidden">
+            <Image src={url} className="vh-100 w-auto" />
+        </Col>
     )
 }

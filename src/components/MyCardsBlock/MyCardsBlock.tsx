@@ -59,23 +59,23 @@ export const MyCardsBlock = () => {
             <Row className="gap-5 position-relative">
                 <TitleBlock point={'02'} header={'B&O Plan —'} title={'User Experience, User Interface'} direction={Direction.ROW_REVERS} />
             </Row>
-        <div className={`${styles.containerBlock}`}>
-            <Col>
-                <Row>
-                    <h1>My Cards</h1>
-                </Row>
-                <Row>
-                    <CardsList cards={cardList} openModalCallback={handleOpenModal} />
-                </Row>
-                <ModalComponent 
-                    isOpen={isOpenModal} 
-                    openModalCallback={handleCloseModal}
-                    handleCloseModal={handleCloseModal}
-                    submitModalCallback={handleSubmitModal}
-                    card={card}
-                />
+            <Col className={`${styles.containerBlock}`}>
+                <Col>
+                    <Row>
+                        <h1>My Cards</h1>
+                    </Row>
+                    <Row>
+                        <CardsList cards={cardList} openModalCallback={handleOpenModal} />
+                    </Row>
+                    <ModalComponent 
+                        isOpen={isOpenModal} 
+                        openModalCallback={handleCloseModal}
+                        handleCloseModal={handleCloseModal}
+                        submitModalCallback={handleSubmitModal}
+                        card={card}
+                    />
+                </Col>
             </Col>
-        </div>
         </Col>
     )
 }

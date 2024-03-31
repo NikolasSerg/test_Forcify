@@ -4,10 +4,11 @@ import { Direction, ITitleBlockProps } from "./TitleBlock.type";
 
 import 'global.scss';
 import styles from './TitleBlock.module.scss';
+import { Breakpoints } from "types";
 
 export const TitleBlock: React.FC<ITitleBlockProps> = ({point, header, title, direction}) => {
 
-    const isLg = useMediaQuery('(max-width: 992px)');
+    const isLg = useMediaQuery(Breakpoints.TO_LG);
 
     const handlePosition = (direction: Direction) => {
         if(direction === Direction.ROW) {

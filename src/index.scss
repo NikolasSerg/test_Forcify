@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 576px;
+  min-width: 320px;  
 }
 
 code {
@@ -21,4 +21,16 @@ code {
 
 .col {
   padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+  
+@media (min-width: 769px) {
+  html {
+    font-size: 16px;
+  }
 }

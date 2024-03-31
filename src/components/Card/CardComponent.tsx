@@ -4,7 +4,7 @@ import styles from './CardComponent.module.scss';
 import { PlusIcon } from '@heroicons/react/24/solid'
 import { TrashIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
 import { ICardProps } from './CardComponent.type';
-import { Button } from 'react-bootstrap';
+import { Button, Col } from 'react-bootstrap';
 import { TypeCard } from 'types';
 
 export const CardComponent: React.FC<ICardProps> = ({card, openModalCallback}) => {
@@ -28,10 +28,10 @@ export const CardComponent: React.FC<ICardProps> = ({card, openModalCallback}) =
               <TrashIcon className={`${styles.icon}`} />
             </Button>
           </> :
-          <div className={`${styles.iconBody} d-flex justify-content-center align-items-center w-100 h-100`}
+          <Col className={`${styles.iconBody} d-flex justify-content-center align-items-center w-100 h-100`}
             onClick={() => openModalCallback(TypeCard.NEW_CARD)} >
             <PlusIcon className='w-75 h-75' />
-          </div>
+          </Col>
         }
         </Card.Body>
     </Card>
